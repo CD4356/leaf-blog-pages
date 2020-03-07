@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration >
+    <!--日志输出目标-->
+    <Appenders>
+        <!--控制台输出日志信息-->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!--日志格式-->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} -- %highlight{%-5level} -- [%thread] -- %highlight{%logger{50}} ---> %msg %n"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <!--只有在Root中引入appender，appender才会生效-->
+        <Root level="info">
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>
+
+</configuration>

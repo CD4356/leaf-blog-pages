@@ -1,0 +1,59 @@
+#日志记录
+logging:
+  config: classpath:log4j2-dev.xml  #引用log4j2日志配置文件
+  level:
+      com.cd.blog.dao: debug  #mybatis log plugin打印完整sql日志
+
+
+#spring boot主配置
+spring:
+
+  #环境切换
+  profiles:
+      active: dev   #开发环境
+      #active: prod  #生成环境
+
+  #thymeleaf模板配置
+  thymeleaf:
+      cache: false                   #取消缓存，避免改了模板还要重启服务器，但不配置也没问题
+      prefix: classpath:/templates/  #模板文件视图前缀，默认是classpath:/templates/，可不用配置
+      suffix: .html                  #模板文件视图后缀，默认是.html，可不用配置
+      check-template-location: true  #检查模板位置，这个可以不配置
+      encoding: utf-8                #编码字符集，默认是utf-8，可不用配置
+      mode: HTML                     #模板样式，默认是HTML，可不用配置
+      servlet:
+            content-type: text/html
+
+  #文件上传解析器
+  servlet:
+      multipart:
+          enabled: true
+          max-file-size: 1MB        #单个文件上传的最大上限
+          max-request-size: 25MB    #所有文件上传的最大上限
+
+  #数据源
+  datasource:
+      #JDBC配置
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: root
+      url: jdbc:mysql://localhost:3306/blog?characterEncoding=utf8&useSSL=false&serverTimeZone=UTC
+      #c3p0连接池
+      type: com.mchange.v2.c3p0.ComboPooledDataSource  #指定自定义连接池类型，不指定则默认使用hikari
+      dataSourceName: dataSource
+      initialPoolSize: 1    #连接池初始化连接数
+      minPoolSize: 1        #连接池最小连接数
+      maxPoolSize: 20       #连接池最大连接数
+      autoCommitOnClose: false  #关闭连接后不自动提交
+      checkoutTimeout: 10000    #连接超时时间
+      maxIdleTime: 1800000      #连接的最大空闲时间，超过这个时间，某个数据库连接还没有被使用，则会断开掉这个连接
+      acquireRetryAttempts: 2   #连接池在获取连接失败后允许重试次数
+
+
+#mybatis配置项
+mybatis:
+    mapper-locations: classpath:mapper/*.xml  #mapper映射文件
+    type-aliases-package: com.cd.blog.entity  #实体类别名
+    #mybatis配置
+    configuration:
+        map-underscore-to-camel-case: true  #开启驼峰命名规则

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration >
+    <!--参数配置-->
+    <Properties>
+        <!--日志文件根路径-->
+        <property name="log_path" value="D:\idea\logs"/>
+    </Properties>
+
+    <!--日志输出目标-->
+    <Appenders>
+        <!--日志文件输出debug级别日志信息-->
+        <RollingFile name="debug_file"
+                     fileName="${log_path}\debug\blog_debug.log"
+                     filePattern="${log_path}\debug\blog_debug-%d{yyyy-MM-dd}-%i.log">
+            <!--文件滚动策略-->
+            <Policies>
+                <!--基于时间的滚动策略，默认是1小时，我这里设置24小时滚动一次-->
+                <TimeBasedTriggeringPolicy interval="24"/>
+                <!--基于大小的滚动策略-->
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+			<!--日志格式-->
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} -- %-5level -- [%thread] -- %logger{50} ---> %msg %n"/>
+            <!--临界值过滤器-->
+            <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            <ThresholdFilter level="info" onMatch="DENY" onMismatch="NEUTRAL"/>
+        </RollingFile>
+
+        <!--日志文件输出日志信息-->
+        <RollingFile name="info_file"
+                     fileName="${log_path}\info\blog_info.log"
+                     filePattern="${log_path}\info\blog_info-%d{yyyy-MM-dd}-%i.log">
+            <!--文件滚动策略-->
+            <Policies>
+                <!--基于时间的滚动策略，默认是1小时，我这里设置24小时滚动一次-->
+                <TimeBasedTriggeringPolicy interval="24"/>
+                <!--基于大小的滚动策略-->
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <!--日志格式-->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} -- %-5level -- [%thread] -- %logger{50} ---> %msg %n"/>
+            <!--临界值过滤器-->
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            <ThresholdFilter level="warn" onMatch="DENY" onMismatch="NEUTRAL"/>
+        </RollingFile>
+
+        <!--日志文件输出日志信息-->
+        <RollingFile name="warn_file"
+                     fileName="${log_path}\warn\blog_warn.log"
+                     filePattern="${log_path}\warn\blog_warn-%d{yyyy-MM-dd}-%i.log">
+            <!--文件滚动策略-->
+            <Policies>
+                <!--基于时间的滚动策略，默认是1小时，我这里设置24小时滚动一次-->
+                <TimeBasedTriggeringPolicy interval="24"/>
+                <!--基于大小的滚动策略-->
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <!--日志格式-->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} -- %-5level -- [%thread] -- %logger{50} ---> %msg %n"/>
+            <!--临界值过滤器-->
+            <ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="DENY"/>
+            <ThresholdFilter level="error" onMatch="DENY" onMismatch="NEUTRAL"/>
+        </RollingFile>
+
+        <!--日志文件输出日志信息-->
+        <RollingFile name="error_file"
+                     fileName="${log_path}\error\blog_error.log"
+                     filePattern="${log_path}\error\blog_error-%d{yyyy-MM-dd}-%i.log">
+            <!--文件滚动策略-->
+            <Policies>
+                <!--基于时间的滚动策略，默认是1小时，我这里设置24小时滚动一次-->
+                <TimeBasedTriggeringPolicy interval="24"/>
+                <!--基于大小的滚动策略-->
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <!--日志格式-->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} -- %-5level -- [%thread] -- %logger{50} ---> %msg %n"/>
+            <!--临界值过滤器-->
+            <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            <ThresholdFilter level="fatal" onMatch="DENY" onMismatch="NEUTRAL"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!--只有在Root中引入appender，appender才会生效-->
+        <Root level="info">
+            <AppenderRef ref="debug_file"/>
+            <AppenderRef ref="info_file"/>
+            <AppenderRef ref="warn_file"/>
+            <AppenderRef ref="error_file"/>
+        </Root>
+    </Loggers>
+
+</configuration>

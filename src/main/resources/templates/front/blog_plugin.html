@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--响应式设计-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客插件</title>
+    <!--网站图标-->
+    <link rel="shortcut icon" href="../image/favicon.ico"/>
+    <!--semantic ui框架-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css" >
+    <!--动画-->
+    <link rel="stylesheet" href="../css/animate.css">
+    <!--particles超酷炫粒子背景-->
+    <link rel="stylesheet" href="../lib/particles/style.css">
+    <!--引用外部css样式-->
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <!--超酷炫粒子背景容器-->
+    <div id="particles-js"></div>
+
+    <!--导航栏-->
+    <nav class="ui inverted attached segment cd-padded-tb-mini cd-shadow-small animated bounce">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <img src="../image/leaf.png" width="61px" class="ui leaf image">
+                <a href="http://localhost:4356" class="item cd-item cd-mobile-hide"><i class="home icon"></i> 首页</a>
+                <a href="http://localhost:4356/blog_type" class="item cd-item cd-mobile-hide"><i class="idea icon"></i> 分类</a>
+                <a href="http://localhost:4356/blog_tag" class="item cd-item cd-mobile-hide"><i class="tags icon"></i> 标签</a>
+                <a href="http://localhost:4356/blog_archive" class="item cd-item cd-mobile-hide"><i class="clone icon"></i> 归档</a>
+                <a href="http://localhost:4356/blog_plugin" class="active item cd-item cd-mobile-hide"><i class="paste icon"></i> 插件</a>
+                <a href="http://localhost:4356/about_me" class="item cd-item cd-mobile-hide"><i class="info icon"></i> 关于我</a>
+                <div class="right item cd-item cd-mobile-hide">
+                    <div class="ui person icon input inverted">
+                        <input type="text" placeholder="搜索">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--移动端时，隐藏菜单，并显示菜单按钮-->
+        <a href="#" class="ui black icon button cd-right-top cd-mobile-show cd-menu-show_and_hide">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <!--GitHub角标-->
+    <a href="https://github.com/CD4356" target="_blank" class="ui large orange left corner rounded label cd-github-fixed cd-github-shadow">
+        <i class="ui github icon" style="color: rgb(0,0,0);size: 2em"></i>
+    </a>
+
+    <!--中间内容-->
+    <div class="cd-container-small cd-margin-big cd-pended-tb-big animated jello">
+        <div class="ui container">
+            <div class="ui grid">
+                <!--11列-->
+                <div class="ui ten wide column cd-font">
+                    <div class="ui teal attached segment">
+                        <div class="ui horizontal divider">
+                            <a href="https://semantic-ui.com/" target="_blank" class="markdown">semantic ui前端ui库</a>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="ui orange basic attached segment">
+                        <div class="ui horizontal divider">markdown编辑器</div>
+                        <div class="ui horizontal divider">
+                            <a href="http://editor.md.ipandao.com/" target="_blank">
+                                <div class="ui column segment cd-padded-min cd-margin-small">
+                                    官网-演示-下载
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="ui blue basic attached segment">
+                        <div class="ui horizontal divider">typo.css内容排版</div>
+                        <div class="ui horizontal divider">
+                            <a href="https://github.com/sofish/typo.css" target="_blank">
+                                <div class="ui column segment cd-padded-min cd-margin-small">
+                                    github-演示-下载
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="ui green basic attached segment">
+                        <div class="ui horizontal divider">Animate.css酷炫动画</div>
+                        <div class="ui horizontal divider">
+                            <a href="https://daneden.github.io/animate.css/" target="_blank">
+                                <div class="ui column segment cd-padded-min cd-margin-small">
+                                    官网-演示-下载
+                                </div>
+                            </a>
+                            <a href="http://www.animate.net.cn/" target="_blank">
+                                <div class="ui column segment cd-padded-min cd-margin-small">
+                                    http://www.animate.net.cn/
+                                </div>
+                            </a>
+                            <a href="http://www.jq22.com/jquery-info819" target="_blank">
+                                <div class="ui column segment cd-padded-min cd-margin-small">
+                                    http://www.jq22.com/jquery-info819
+                                </div>
+                            </a>
+                            <a href="https://www.dowebok.com/98.html" target="_blank">
+                                <div class="ui column segment cd-padded-min cd-margin-small">
+                                    https://www.dowebok.com/98.html
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="ui pink basic attached segment">
+                        <div class="ui horizontal divider">prism代码高亮</div>
+                        <div class="ui horizontal divider">
+                            <a href="https://prismjs.com/" target="_blank">
+                                <div class="ui column segment cd-padded-min cd-margin-small">
+                                    官网-演示-下载
+                                </div>
+                            </a>
+                            <a href="https://github.com/prism/Prism" target="_blank">
+                                <div class="ui column segment cd-padded-min cd-margin-small">
+                                    GitHub-下载
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="ui purple basic attached segment">
+                        <div class="ui horizontal divider">tocbot目录生成</div>
+                        <div class="ui horizontal divider">
+                            <a href="https://tscanlin.github.io/tocbot/" target="_blank">
+                                <div class="ui column segment cd-padded-min cd-margin-small">
+                                    官网-演示-下载
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="ui purple basic attached segment">
+                        <div class="ui horizontal divider">qrcode.js二维码生成</div>
+                        <div class="ui horizontal divider">
+                            <a href="https://davidshimjs.github.io/qrcodejs/" target="_blank">
+                                <div class="ui column segment cd-padded-min cd-margin-small">
+                                    官网-演示-下载
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="ui purple basic attached segment">
+                        <div class="ui horizontal divider">waypoints滚动侦测-</div>
+                        <div class="ui horizontal divider">
+                            <a href="http://imakewebthings.com/waypoints/" target="_blank">
+                                <div class="ui column segment cd-padded-min cd-margin-small">
+                                    官网-演示-下载
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="ui purple basic attached segment">
+                        <div class="ui horizontal divider">jquery.scrollTo平滑滚动</div>
+                        <div class="ui horizontal divider">
+                            <a href="https://github.com/flesler/jquery.scrollTo" target="_blank">
+                                <div class="ui column segment cd-padded-min cd-margin-small">
+                                    github-下载
+                                </div>
+                            </a>
+                            <a href="http://demos.flesler.com/jquery/scrollTo/" target="_blank">
+                                <div class="ui column segment cd-padded-min cd-margin-small">
+                                    官网-演示-下载
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="ui purple basic attached segment">
+                        <div class="ui horizontal divider">particles.js超炫粒子背景</div>
+                        <div class="ui horizontal divider">
+                            <a href="https://github.com/VincentGarreau/particles.js" target="_blank">
+                                <div class="ui column segment cd-padded-min cd-margin-small">
+                                    github-教程-下载
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--5列-->
+                <div class="ui six wide column">
+                    <div class="ui teal attached segment center aligned">
+                        <div class="cd-font-bold">落叶无痕</div>
+                    </div>
+                    <div class="ui teal attached segment cd-text" style="font-family: Consolas,宋体">
+                        <p>
+                            我是一名java从业者，专注于java、mysql、算法、jquery学习，主力是我开发的一个个人博客，我会不定期在这上面分享技术文章和学习心得！
+                        </p>
+                    </div>
+                    <div class="ui attached segment">
+                        兴趣
+                    </div>
+                    <div class="ui attached segment">
+                        标签
+                    </div>
+                    <div class="ui segment">
+                        <!--GitHub-->
+                        <a href="https://github.com/CD4356" target="_blank">
+                            <img src="../image/github2.jpg" data-title="GitHub"
+                                 data-content="https://github.com/CD4356"
+                                 class="ui avatar image qq">
+                        </a>
+                        <!--CSDN-->
+                        <a href="https://blog.csdn.net/weixin_42950079" target="_blank">
+                            <img src="../image/csdn.jpg" class="ui avatar image qq cd-play-csdn">
+                        </a>
+                        <!--微信-->
+                        <img src="../image/weixin.jpg" data-title="微信"
+                             data-content="cmd4356"
+                             class="ui avatar image qq">
+                        <!--QQ-->
+                        <img src="../image/qq.jpg" class="ui avatar image qq cd-play-qq">
+                    </div>
+
+
+                    <div>
+                        <div class="ui cd-csdn flowing popup transition hidden">
+                            <div class="image">
+                                <img src="../image/csdn1.png" alt="" class="ui rounded bordered image" style="width: 130px">
+                                <div class="cd-font" style="text-align: center">CSDN</div>
+                            </div>
+                        </div>
+
+                        <div class="ui cd-qq flowing popup transition hidden">
+                            <div class="image">
+                                <img src="../image/qq1.png" alt="" class="ui rounded bordered image" style="width: 130px">
+                                <div class="cd-font" style="text-align: center">QQ</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--二维码-->
+                    <div class="cd-margin-top">
+                        <div class="ui horizontal divider header cd-font">扫码关注我</div>
+                        <div class="ui centered card" style="width: 105px;height: 105px">
+                            <img src="../image/wechat.jpg" class="ui rounded image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--脚部-->
+    <footer class="ui inverted vertical segment cd-pended-tb-large">
+        <div class="ui center aligned container">
+            <div class="ui stackable grid inverted divided cd-text">
+                <!--二维码-->
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="../image/wechat.jpg" class="ui rounded image wechat">
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="ui centered card" style="width: 105px;height: 105px">-->
+                <!--<img src="../image/wechat.jpg" class="ui rounded image">-->
+                <!--</div>-->
+                <div class="ui four wide column cd-opacity">
+                    <h4 class="ui inverted head cd-text-spaced">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a href="" class="item">semantic-ui文档</a>
+                        <a href="" class="item">semantic-ui文档</a>
+                        <a href="" class="item">semantic-ui文档</a>
+                    </div>
+                </div>
+                <div class="ui four wide column cd-opacity">
+                    <h4 class="ui inverted head cd-text-spaced">联系我</h4>
+                    <div class="ui inverted link list">
+                        <a href="" class="item">semantic-ui文档</a>
+                        <a href="" class="item">semantic-ui文档</a>
+                        <a href="" class="item">semantic-ui文档</a>
+                    </div>
+                </div>
+                <div class="ui five wide column cd-opacity">
+                    <h4 class="ui inverted head cd-text-spaced">关于我</h4>
+                    <p class="cd-text-thin cd-text-spaced cd-opacity">我是一名java从业者，专注于java、mysql、算法、jquery学习，主力是我开发的一个个人博客，我会不定期在这上面分享技术文章和学习心得！</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="cd-text cd-opacity-mini">Copyright © 2016 - 2017 Lirenmi Designed by Lirenmi</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+    <!--particles超酷炫粒子背景-->
+    <script src="../lib/particles/particles.min.js"></script>
+    <!--particles超酷炫粒子背景-->
+    <script src="../lib/particles/app.js"></script>
+    <script>
+        // 移动端中菜单栏的显示与隐藏
+        $('.cd-menu-show_and_hide').click(function () {
+            $('.cd-item').toggleClass('cd-mobile-hide');
+        });
+
+        //移动至.qq组件，弹出窗口
+        $('.qq').popup();
+
+        //csdn博客二维码的显示与隐藏
+        $('.cd-play-csdn').popup({
+            popup: $('.cd-csdn.popup'), //触发对象
+            position: 'bottom center'      //弹出窗口的位置
+        });
+
+        //qq二维码的显示与隐藏
+        $('.cd-play-qq').popup({
+            popup: $('.cd-qq.popup'), //触发对象
+            position: 'bottom center'      //弹出窗口的位置
+        });
+
+        //菜单栏LoGo图标过渡特效
+        $('.leaf.image')
+            .transition('set looping')
+            .transition('bounce', '2500ms')
+        ;
+    </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--响应式设计-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理页</title>
+    <link rel="shortcut icon" href="../image/favicon.ico"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css" >
+    <!--动画-->
+    <link rel="stylesheet" href="../css/animate.css">
+    <!--引用外部css样式-->
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <!--导航栏-->
+    <nav class="ui inverted attached segment cd-padded-tb-mini cd-shadow-small animated bounce">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <img src="../image/leaf.png" width="61px" class="ui leaf image">
+                <a href="" class="ui active item cd-item cd-mobile-hide"><i class="home icon"></i> 博客</a>
+                <a href="" class="ui item cd-item cd-mobile-hide"><i class="idea icon"></i> 分类</a>
+                <a href="" class="ui item cd-item cd-mobile-hide"><i class="tags icon"></i> 标签</a>
+                <div class="ui item right aligned inline dropdown">
+                    <div class="text">
+                        <img class="ui avatar image" src="../image/leaf.png">
+                        落叶无痕
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu cd-font">
+                        <div class="item">
+                            <i class="ui blue edit icon"></i>个人信息
+                        </div>
+                        <div class="item">
+                            <img class="ui avatar image" src="../image/leaf.png">
+                            Elliot Fu
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--移动端时，隐藏菜单，并显示菜单按钮-->
+        <a href="#" class="ui black icon button cd-right-top cd-mobile-show cd-menu-show_and_hide">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <!--二级导航-->
+    <div class="ui teal inverted attached pointing menu">
+        <div class="ui container">
+            <div class="right menu">
+                <a href="" class="item">发布</a>
+                <a href="" class="active item">列表</a>
+            </div>
+        </div>
+    </div>
+
+    <!--GitHub角标-->
+    <a href="https://github.com/CD4356" target="_blank" class="ui large green left corner rounded label cd-github-fixed cd-github-shadow">
+        <i class="ui github icon" style="color: rgb(0,0,0);size: 2em"></i>
+    </a>
+
+    <!--中间内容-->
+    <div class="cd-container cd-pended-tb-big">
+        <div class="ui container cd-font">
+            <form action="" method="post" class="ui form" style="opacity: 0.7 !important;">
+                <div class="ui  white inverted inline fields cd-padded-min segment">
+                    <div class="field cd-margin-min">
+                        <input type="text" name="title" placeholder="标题">
+                    </div>
+                    <div class="field cd-margin-min">
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="type">
+                            <i class="ui dropdown icon"></i>
+                            <div class="default text">分类</div>
+                            <div class="menu">
+                                <div class="item" data-value="1">Spring Boot</div>
+                                <div class="item" data-value="2">Java</div>
+                                <div class="item" data-value="3">MyBatis</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field cd-margin-min">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="recommend" name="recommend">
+                            <label for="recommend">推荐</label>
+                        </div>
+                    </div>
+                    <div class="field cd-margin-min">
+                        <div class="ui small teal basic button"><i class="search icon"></i>搜索</div>
+                    </div>
+                </div>
+            </form>
+
+            <!--加celled，表格就会加上网格-->
+            <table class="ui white inverted selectable tablet stackable celled table" style="opacity: 0.6 !important;">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>标题</th>
+                        <th>类型</th>
+                        <th>推荐</th>
+                        <th>状态</th>
+                        <th>更新时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>你真的理解什么是财富自由吗？</td>
+                        <td>Spring Boot</td>
+                        <td>是</td>
+                        <td>草稿</td>
+                        <td>2020-3-17</td>
+                        <td>
+                            <a href="" class="ui mini blue basic button">编辑</a>
+                            <a href="" class="ui mini red basic button">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>你真的理解什么是财富自由吗？</td>
+                        <td>Spring Boot</td>
+                        <td>是</td>
+                        <td>草稿</td>
+                        <td>2020-3-17</td>
+                        <td>
+                            <a href="" class="ui mini blue basic button">编辑</a>
+                            <a href="" class="ui mini red basic button">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>你真的理解什么是财富自由吗？</td>
+                        <td>Spring Boot</td>
+                        <td>是</td>
+                        <td>草稿</td>
+                        <td>2020-3-17</td>
+                        <td>
+                            <a href="" class="ui mini blue basic button">编辑</a>
+                            <a href="" class="ui mini red basic button">删除</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="7">
+                            <div class="ui pagination mini menu">
+                                <a href="" class="item">上一页</a>
+                                <a href="" class="item">下一页</a>
+                            </div>
+                            <a href="" class="ui basic white small button right floated">新增</a>
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <!--脚部-->
+    <footer class="ui inverted vertical segment cd-pended-tb-large">
+        <div class="ui center aligned container">
+            <div class="ui stackable grid inverted divided cd-text">
+                <!--二维码-->
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="../image/wechat.jpg" class="ui rounded image wechat">
+                        </div>
+                    </div>
+                </div>
+                <div class="ui four wide column cd-opacity">
+                    <h4 class="ui inverted head cd-text-spaced">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a href="" class="item">semantic-ui文档</a>
+                        <a href="" class="item">semantic-ui文档</a>
+                        <a href="" class="item">semantic-ui文档</a>
+                    </div>
+                </div>
+                <div class="ui four wide column cd-opacity">
+                    <h4 class="ui inverted head cd-text-spaced">联系我</h4>
+                    <div class="ui inverted link list">
+                        <a href="" class="item">semantic-ui文档</a>
+                        <a href="" class="item">semantic-ui文档</a>
+                        <a href="" class="item">semantic-ui文档</a>
+                    </div>
+                </div>
+                <div class="ui five wide column cd-opacity">
+                    <h4 class="ui inverted head cd-text-spaced">关于我</h4>
+                    <p class="cd-text-thin cd-text-spaced cd-opacity">我是一名java从业者，专注于java、mysql、算法、jquery学习，主力是我开发的一个个人博客，我会不定期在这上面分享技术文章和学习心得！</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="cd-text cd-opacity-mini">Copyright © 2016 - 2017 Lirenmi Designed by Lirenmi</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+    <script>
+        // 移动端中菜单栏的显示与隐藏
+        $('.cd-menu-show_and_hide').click(function () {
+            $('.cd-item').toggleClass('cd-mobile-hide');
+        });
+
+        //菜单栏LoGo图标过渡特效
+        $('.leaf.image')
+            .transition('set looping')
+            .transition('bounce', '2500ms')
+        ;
+
+        //弹出下拉框
+        $('.ui.dropdown').dropdown({
+            on: 'hover' //默认为点击弹出下拉框，这里设置为滑入弹出下拉框
+        });
+    </script>
+</body>
+</html>

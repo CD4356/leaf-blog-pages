@@ -1,0 +1,284 @@
+
+/*-------------------------------------------------------------------------------------*/
+
+body {
+    background: url("../image/9.png") !important;
+}
+
+.wechat {
+    width: 120px !important;
+}
+
+/*-----------------padding-------------------------*/
+
+.cd-padded-mini {
+    padding: 0.3em !important;
+}
+.cd-padded-small {
+    padding: 0.5em !important;
+}
+.cd-padded-min {
+    padding: 0.7em !important;
+}
+.cd-padded-big {
+    padding: 1em !important;
+}
+.cd-padded-large {
+    padding: 2em !important;
+}
+.cd-padded-huge {
+    padding: 3em !important;
+}
+.cd-padded {
+    padding: 4em !important;
+}
+
+.cd-padded-brl {
+    padding-right: 4em !important;
+    padding-bottom: 4em !important;
+    padding-left: 4em !important;
+}
+
+.cd-pended-b {
+    padding-bottom: 1em !important;
+}
+
+.cd-padded-lr {
+    padding-left: 4em !important;
+    padding-right: 4em !important;
+}
+
+.cd-padded-tb-mini {
+    padding-top: 0.1em !important;
+    padding-bottom: 0.1em !important;
+}
+
+.cd-pended-tb-small {
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+}
+.cd-pended-tb {
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+.cd-pended-tb-large {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+}
+.cd-pended-tb-big {
+    padding-top: 3em !important;
+    padding-bottom: 3em !important;
+}
+.cd-pended-tb-huge {
+    padding-top: 4em !important;
+    padding-bottom: 4em !important;
+}
+.cd-pended-tb-massive {
+    padding-top: 5em !important;
+    padding-bottom: 5em !important;
+}
+
+
+/*-----------------margin-------------------------*/
+
+.cd-margin {
+    margin: 10em !important;
+}
+
+.cd-margin-top {
+    margin-top: 2em !important;
+}
+
+.cd-margin-bottom-mini {
+    margin-bottom: 0.5em !important;
+}
+
+.cd-margin-bottom-huge {
+    margin-bottom: 5em !important;
+}
+
+.cd-margin-mini {
+    margin-top: 0.1em !important;
+    margin-bottom: 0.1em !important;
+}
+
+.cd-margin-min {
+    margin-top: 0.2em !important;
+    margin-bottom: 0.2em !important;
+}
+
+.cd-margin-small {
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+}
+.cd-margin {
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+}
+.cd-margin-large {
+    margin-top: 2em !important;
+    margin-bottom: 2em !important;
+}
+.cd-margin-big {
+    margin-top: 3em !important;
+    margin-bottom: 3em !important;
+}
+.cd-margin-huge {
+    margin-top-top: 4em !important;
+    margin-bottom: 4em !important;
+}
+.cd-margin-massive {
+    margin-top: 5em !important;
+    margin-bottom: 5em !important;
+}
+
+
+/*-----------------text文字-------------------------*/
+
+.cd-text {
+    font-weight: 300 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.8 !important;
+}
+
+.cd-toc-text {
+    letter-spacing: 1px !important;
+    line-height: 1.8 !important;
+}
+
+.cd-text-thin {
+    font-weight: 300 !important;
+}
+
+.cd-text-spaced {
+    letter-spacing: 1px !important;
+}
+
+.cd-text-lined {
+    line-height: 1.8 !important;
+}
+
+.cd-opacity {
+    opacity: 0.8 !important;
+}
+
+.cd-opacity-mini {
+    opacity: 0.6 !important;
+}
+
+
+/*-----------------font字体-------------------------*/
+
+.cd-font {
+    font-family: Consolas,宋体 !important;
+    font-weight: inherit !important;
+}
+
+.cd-font-bold {
+    font-family: Consolas,宋体 !important;
+    font-weight: bold !important;
+    font-size: 21px !important;
+}
+
+.cd-font-small {
+    font-family: Dialog,宋体 !important;
+    font-weight: bold !important;
+}
+
+/*-----------------fixed固定-------------------------*/
+
+.cd-github-fixed {
+    right: 0 !important;
+    top: 0 !important;
+    position: fixed !important;
+}
+
+
+/*-----------------display显示-------------------------*/
+
+.cd-inline-block {
+    display: inline-block !important;
+}
+
+.cd-mobile-show {
+    display: none !important;
+}
+
+
+/*-----------------container容器-------------------------*/
+
+.cd-container {
+    max-width: 72em !important;
+    margin: auto !important;
+}
+
+.cd-container-small {
+    max-width: 65em !important;
+    margin: auto !important;
+}
+
+
+/*-----------------color颜色-------------------------*/
+
+.cd-num-color {
+    color: teal !important;
+}
+
+/*-----------------shadow阴影-------------------------*/
+
+.cd-shadow-small {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+.cd-github-shadow {
+    box-shadow: 8px 8px 16px rgba(0,0,5,0.2) !important;
+}
+
+
+/*-----------------font字体大小-------------------------*/
+
+.cd-font-size-tiny {
+    font-size: 12px !important;
+}
+
+
+/*-----------------position位置-------------------------*/
+
+.cd-right-top {
+    top: 0px !important;
+    right: 0px !important;
+    position: absolute !important;
+}
+
+.cd-fixed {
+    position: fixed !important;
+    z-index: 10 !important;
+}
+
+.cd-right-bottom {
+    right: 1% !important;
+    bottom: 4% !important;
+}
+
+/*-----------------@media枚举-------------------------*/
+
+/*屏幕小于768px时生效*/
+@media screen and (max-width: 768px){
+    /*小屏幕隐藏*/
+    .cd-mobile-hide {
+        display: none !important;
+    }
+    /*小屏幕显示菜单图标*/
+    .cd-mobile-show {
+        display: block !important;
+    }
+    /*小屏幕左右内间距清0*/
+    .cd-mobile-padded-lr-responsive {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    /*小屏幕宽度占满*/
+    .cd-mobile-wide {
+        width: 100% !important;
+    }
+}

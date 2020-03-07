@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--响应式设计-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客详情</title>
+    <link rel="shortcut icon" href="../image/favicon.ico"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css" >
+    <!--typo内容排版-->
+    <link rel="stylesheet" href="../css/typo.css">
+    <!--animate动画-->
+    <link rel="stylesheet" href="../css/animate.css">
+    <!--prism代码高亮-->
+    <link rel="stylesheet" href="../lib/prism/prism.css">
+    <!--tocbot生成目录-->
+    <link rel="stylesheet" href="../lib/tocbot/tocbot.css">
+    <!--particles超酷炫粒子背景-->
+    <link rel="stylesheet" href="../lib/particles/style.css">
+    <!--引用外部css样式-->
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <!--超酷炫粒子背景容器-->
+    <div id="particles-js"></div>
+
+    <!--导航栏-->
+    <nav class="ui inverted attached segment cd-padded-tb-mini cd-shadow-small animated bounce">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <img src="../image/leaf.png" width="61px" class="ui leaf image">
+                <a href="http://localhost:4356" class="item cd-item cd-mobile-hide"><i class="home icon"></i> 首页</a>
+                <a href="http://localhost:4356/blog_type" class="item cd-item cd-mobile-hide"><i class="idea icon"></i> 分类</a>
+                <a href="http://localhost:4356/blog_tag" class="item cd-item cd-mobile-hide"><i class="tags icon"></i> 标签</a>
+                <a href="http://localhost:4356/blog_archive" class="item cd-item cd-mobile-hide"><i class="clone icon"></i> 归档</a>
+                <a href="http://localhost:4356/blog_plugin" class="item cd-item cd-mobile-hide"><i class="plugin icon"></i> 插件</a>
+                <a href="http://localhost:4356/about_me" class="item cd-item cd-mobile-hide"><i class="info icon"></i> 关于我</a>
+                <div class="right item cd-item cd-mobile-hide">
+                    <div class="ui person icon input inverted">
+                        <input type="text" placeholder="搜索">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--移动端时，隐藏菜单，并显示菜单按钮-->
+        <a href="#" class="ui black icon button cd-right-top cd-mobile-show cd-menu-show_and_hide">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <!--GitHub角标-->
+    <a href="https://github.com/CD4356" target="_blank" class="ui large orange left corner rounded label cd-github-fixed cd-github-shadow">
+        <i class="ui github icon" style="color: rgb(0,0,0);size: 3em"></i>
+    </a>
+
+    <!--中间博文内容-->
+    <div id="cd-waypoint" class="cd-container-small cd-margin-big cd-pended-tb-big animated flash">
+        <div class="ui container">
+            <!--头部区域-->
+            <div class="ui top attached segment">
+                <div class="ui stackable grid">
+                    <!--11列-->
+                    <div class="ui eleven wide column">
+                        <div class="ui horizontal link list small">
+                            <div class="item">
+                                <img src="https://picsum.photos/id/1022/367/267" class="ui avatar image">
+                                <div class="content">
+                                    <a href="" target="_blank" class="cd-font">海底世界</a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <i class="calendar icon"></i> 2020-02-18
+                            </div>
+                            <div class="item">
+                                <i class="eye icon"></i> 325
+                            </div>
+                        </div>
+                    </div>
+                    <!--列-->
+                    <a href="" target="_blank" class="ui five wide column right aligned bottom pointing cd-opacity">
+                        <div class="ui label cd-padded-small cd-text-spaced" style="color: cornflowerblue">
+                            <i class="ui tags icon"></i>Spring Boot
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!--图片区域-->
+            <div class="ui attached segment">
+                <img src="https://picsum.photos/id/1025/367/167" class="ui fluid rounded image">
+            </div>
+            <!--内容区-->
+            <div class="ui attached padded segment">
+                <!--原创-->
+                <div class="ui basic segment right aligned">
+                    <div class="ui basic orange label right aligned large">原创</div>
+                </div>
+                <!--文章标题-->
+                <h2 class="ui centered header cd-font cd-pended-b">spring boot集成log4j2日志实现框架</h2>
+                <!--博文主体-->
+                <div class="content typo typo-selection js-toc-content cd-padded-brl cd-text cd-mobile-padded-lr-responsive">
+                    <div class="content">
+                        <h4 id="section2">一. Java入门程序</h4>
+                    <pre><code  class="language-java">public class HelloWord {
+
+    public static void main(String[] args) {
+        System.out.println("项目以启动！");
+    }
+
+}</code></pre>
+                        <h5 id="section3">运算法则</h5>
+                        <pre><code  class="language-java">public class HelloWord {
+
+    public static void main(String[] args) {
+        int a=2, b=3;
+        System.out.println("a+b=" + (a+b));
+    }
+
+}</code></pre>
+                        <h5 id="section4">String类</h5>
+                        <pre><code  class="language-java">public class HelloWord {
+
+    public static void main(String[] args) {
+        String str = "我是字符串！";
+        System.out.println(str);
+    }
+
+}</code></pre>
+                        <h4 id="section22">二. Java入门程序</h4>
+                    <pre><code  class="language-java">public class HelloWord {
+
+    public static void main(String[] args) {
+        System.out.println("项目以启动！");
+    }
+
+}</code></pre>
+                        <h5 id="section33">运算法则</h5>
+                        <pre><code  class="language-java">public class HelloWord {
+
+    public static void main(String[] args) {
+        int a=2, b=3;
+        System.out.println("a+b=" + (a+b));
+    }
+
+}</code></pre>
+                        <h5 id="section44">String类</h5>
+                        <pre><code  class="language-java">public class HelloWord {
+
+    public static void main(String[] args) {
+        String str = "我是字符串！";
+        System.out.println(str);
+    }
+
+}</code></pre>
+                    </div>
+                </div>
+                <!--打赏-->
+                <div class="popup">
+                    <!--打赏按钮-->
+                    <div class="ui basic segment center aligned cd-play-button">
+                        <button class="ui orange basic button cd-font">打 赏</button>
+                    </div>
+                    <!--二维码赞赏-->
+                    <div class="ui cd-play-QR flowing popup transition hidden">
+                        <div class="cd-font cd-margin-small" style="text-align: center"> 一分钱也是一种认可 </div>
+                        <div class="ui teal basic label">
+                            <div class="ui images" style="font-size: inherit !important;">
+                                <div class="image">
+                                    <img src="../image/bao-give.png" alt="" class="ui rounded bordered image" style="width: 130px">
+                                    <div class="cd-font" style="text-align: center">微信</div>
+                                </div>
+                                <div class="image">
+                                    <img src="../image/wechat-give.png"  alt="" class="ui rounded bordered image" style="width: 130px">
+                                    <div class="cd-font" style="text-align: center">支付宝</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--博客信息-->
+            <div class="ui attached basic brown segment">
+                <div class="ui grid cd-text middle aligned">
+                    <div class="two wide column"></div>
+                    <div class="eight wide column ">
+                        <ul class="list">
+                            <li>作者: 海底世界</li>
+                            <li>发表时间: 2020-2-15</li>
+                            <li>版权声明: 自由转载-转载请附上作者与地址</li>
+                            <li>备注: 打赏是动力</li>
+                        </ul>
+                    </div>
+                    <div class="four wide column">
+                        <img src="../image/wechat.jpg" class="ui rounded image wechat">
+                    </div>
+                    <div class="two wide column"></div>
+                </div>
+            </div>
+            <!--评论区-->
+            <div id="comment-container" class="ui attached segment cd-margin-huge">
+                <div class="ui segment cd-padded-large">
+                    <div class="ui small comments">
+                        <h3 class="ui dividing header cd-text"><b>评论</b></h3>
+
+                        <div class="comment cd-font">
+                            <a class="avatar">
+                                <img src="https://picsum.photos/id/1022/367/267">
+                            </a>
+                            <div class="content">
+                                <a class="author">马特</a>
+                                <div class="metadata">
+                                    <span class="date">今天下午5:42</span>
+                                </div>
+                                <div class="text">
+                                    多么艺术！
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">回复</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comment cd-font">
+                            <a class="avatar">
+                                <img src="https://picsum.photos/id/1022/367/267">
+                            </a>
+                            <div class="content">
+                                <a class="author">傅lio</a>
+                                <div class="metadata">
+                                    <span class="date">昨天上午12:30</span>
+                                </div>
+                                <div class="text">
+                                    <p>这对我的研究非常有用。也谢谢！</p>
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">回复</a>
+                                </div>
+                            </div>
+
+                            <div class="comments cd-font">
+                                <div class="comment">
+                                    <a class="avatar">
+                                        <img src="https://picsum.photos/id/1022/367/267">
+                                    </a>
+                                    <div class="content">
+                                        <a class="author">珍妮·赫斯（Jenny Hess）</a>
+                                        <div class="metadata">
+                                            <span class="date">现在</span>
+                                        </div>
+                                        <div class="text">
+                                            艾略特，你总是很正确:)
+                                        </div>
+                                        <div class="actions">
+                                            <a class="reply">回复</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comment cd-font">
+                            <a class="avatar">
+                                <img src="https://picsum.photos/id/1022/367/267">
+                            </a>
+                            <div class="content">
+                                <a class="author">乔·亨德森</a>
+                                <div class="metadata">
+                                    <span class="date">5天前</span>
+                                </div>
+                                <div class="text">
+                                    杜德，太棒了。
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">回复</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="ui form cd-text">
+                    <div class="field">
+                        <textarea name="content" placeholder="确认过眼神，是写过神评的人. . ."></textarea>
+                    </div>
+                    <div class="fields">
+                        <div class="field cd-margin-bottom-mini cd-mobile-wide">
+                            <div class="ui left icon input">
+                                <i class="blue user icon"></i>
+                                <input type="text" name="name" placeholder="姓名">
+                            </div>
+                        </div>
+                        <div class="field cd-margin-bottom-mini cd-mobile-wide">
+                            <div class="ui left icon input">
+                                <i class="blue mail icon"></i>
+                                <input type="text" name="email" placeholder="邮箱">
+                            </div>
+                        </div>
+                        <div class="field cd-margin-bottom-mini cd-mobile-wide">
+                            <button class="ui blue submit button cd-opacity-mini cd-mobile-wide" style="color: white">发 布</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--隐藏的二维码-->
+    <div>
+        <!--微信二维码-->
+        <div class="ui cd-qrcode flowing popup transition hidden">
+            <div id="cd-qrcode" class="ui teal basic image" style="width: 110px">
+                <!--<img src="../image/wechat.jpg" alt="" class="ui rounded bordered image">-->
+                <div class="cd-font" style="text-align: center; color: teal">扫码阅读</div>
+            </div>
+        </div>
+        <!--QQ二维码-->
+        <div class="ui cd-qq flowing popup transition hidden">
+            <div class="image" style="width: 120px">
+                <img src="../image/qq1.png" alt="扫码加QQ" class="ui rounded bordered image">
+                <div class="cd-font" style="text-align: center">扫码加QQ</div>
+            </div>
+        </div>
+    </div>
+
+    <!--隐藏的目录-->
+    <div class="ui cd-toc-container flowing popup transition hidden cd-font cd-toc-text" style="width: 250px !important;">
+        <ul class="js-toc">
+
+        </ul>
+    </div>
+
+    <!--目录栏-->
+    <div id="cd-toolbar" class="ui vertical icon buttons hidden cd-fixed cd-right-bottom cd-padded-mini" style="display: none">
+        <button type="button" class="ui teal button cd-font cd-toc">目录</button>
+        <a href="#comment-container" class="ui teal button comment cd-font">留言</a>
+        <button class="ui button cd-hover-qrcode"><i class="green weixin icon"></i></button>
+        <button class="ui button cd-hover-qq"><i class="blue qq icon"></i></button>
+        <div id="cd-scrollTo" class="ui brown button cd-font cd-opacity">登顶</div>
+    </div>
+
+    <div id="cd-waypoint-offset" class="ui pink segment" style="display: none;width: 100%;height: 500px">
+    </div>
+
+    <!--脚部-->
+    <footer class="ui inverted vertical segment cd-pended-tb-large">
+        <div class="ui center aligned container">
+            <div class="ui stackable grid inverted divided cd-text">
+                <!--二维码-->
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="../image/wechat.jpg" class="ui rounded image wechat">
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="ui centered card" style="width: 105px;height: 105px">-->
+                <!--<img src="../image/wechat.jpg" class="ui rounded image">-->
+                <!--</div>-->
+                <div class="ui four wide column cd-opacity">
+                    <h4 class="ui inverted head cd-text-spaced">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a href="" class="item">semantic-ui文档</a>
+                        <a href="" class="item">semantic-ui文档</a>
+                        <a href="" class="item">semantic-ui文档</a>
+                    </div>
+                </div>
+                <div class="ui four wide column cd-opacity">
+                    <h4 class="ui inverted head cd-text-spaced">联系我</h4>
+                    <div class="ui inverted link list">
+                        <a href="" class="item">semantic-ui文档</a>
+                        <a href="" class="item">semantic-ui文档</a>
+                        <a href="" class="item">semantic-ui文档</a>
+                    </div>
+                </div>
+                <div class="ui five wide column cd-opacity">
+                    <h4 class="ui inverted head cd-text-spaced">关于我</h4>
+                    <p class="cd-text-thin cd-text-spaced cd-opacity">我是一名java从业者，专注于java、mysql、算法、jquery学习，主力是我开发的一个个人博客，我会不定期在这上面分享技术文章和学习心得！</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="cd-text cd-opacity-mini">Copyright © 2016 - 2017 Lirenmi Designed by Lirenmi</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+    <!--prism代码高亮-->
+    <script src="../lib/prism/prism.js"></script>
+    <!--tocbot生成目录-->
+    <script src="../lib/tocbot/tocbot.min.js"></script>
+    <!--qrcode生成二维码-->
+    <script src="../lib/qrcode/qrcode.min.js"></script>
+    <!--jquery.scrollTo平滑滚动-->
+    <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+    <!--waypoint滚动侦测-->
+    <script src="../lib/waypoint/jquery.waypoints.min.js"></script>
+    <!--particles超酷炫粒子背景-->
+    <script src="../lib/particles/particles.min.js"></script>
+    <!--particles超酷炫粒子背景-->
+    <script src="../lib/particles/app.js"></script>
+    <script>
+        //waypoint滚动侦测
+        var waypoint = new Waypoint({
+            element: document.getElementById('cd-waypoint'),
+            handler: function(direction) {
+                if (direction == 'down') {
+                    $('#cd-toolbar').show(500);
+                } else {
+                    $('#cd-toolbar').hide(500);
+                }
+                console.log('Scrolled to waypoint!  ' + direction);
+            }
+        });
+
+        //tocbot目录生成插件初始化
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.js-toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.js-toc-content',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1, h2, h3, h4, h5, h6',
+            // For headings inside relative or absolute positioned containers within content.
+            hasInnerContainers: true,
+        });
+        //toc目录的显示与隐藏
+        $('.cd-toc').popup({
+            popup: $('.cd-toc-container.popup'), //触发对象
+            on: 'click',                   //触发方式
+            position: 'left center'      //弹出窗口的位置
+        });
+
+        //qrcode生成二维码
+        var qrcode = new QRCode("cd-qrcode", {
+            text: "http://localhost:4356/blog_detail#comment-container",
+            width: 110,
+            height: 110,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+
+        //jquery.scrollTo平滑滚动
+        $('#cd-scrollTo').click(function () {
+            //设置250毫秒后滚动到顶部
+            $(window).scrollTo(0,250);
+        });
+
+        //prism代码高亮-自动添加行号
+        $('pre').addClass("line-numbers").css("white-space", "pre-wrap");
+
+        // 移动端中菜单栏的显示与隐藏
+        $('.cd-menu-show_and_hide').click(function () {
+            $('.cd-item').toggleClass('cd-mobile-hide');
+        });
+
+        //赞赏二维码的显示与隐藏
+        $('.cd-play-button').popup({
+            popup: $('.cd-play-QR.popup'), //触发对象
+            on: 'click',                   //触发方式
+            position: 'bottom center'      //弹出窗口的位置
+        });
+
+        //qq二维码的显示与隐藏
+        $('.cd-hover-qq').popup({
+            popup: $('.cd-qq.popup'),  //触发对象
+            on: 'hover',
+            position: 'left center'    //弹出窗口的位置
+        });
+
+        //页面二维码的显示与隐藏
+        $('.cd-hover-qrcode').popup({
+            popup: $('.cd-qrcode.popup'),  //触发对象
+            on: 'hover',
+            position: 'left center'    //弹出窗口的位置
+        });
+
+        //菜单栏LoGo图标过渡特效
+        $('.leaf.image')
+            .transition({
+                animation : 'jiggle',
+                duration  : 800,
+                interval  : 200
+            })
+            .transition('set looping')
+        ;
+    </script>
+</body>
+</html>
